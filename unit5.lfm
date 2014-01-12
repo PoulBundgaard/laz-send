@@ -1,0 +1,71 @@
+object Form5: TForm5
+  Left = 980
+  Height = 240
+  Top = 221
+  Width = 320
+  Caption = 'Informacje'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '1.0.1.3'
+  object Panel1: TPanel
+    Left = 0
+    Height = 40
+    Top = 200
+    Width = 320
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 40
+    ClientWidth = 320
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 145
+      Height = 40
+      Top = 0
+      Width = 175
+      Align = alRight
+      BevelOuter = bvNone
+      ClientHeight = 40
+      ClientWidth = 175
+      TabOrder = 0
+      object Button1: TButton
+        Left = 11
+        Height = 25
+        Top = 7
+        Width = 75
+        Caption = 'Zapisz'
+        OnClick = Button1Click
+        TabOrder = 0
+      end
+      object Button2: TButton
+        Left = 91
+        Height = 25
+        Top = 7
+        Width = 75
+        Caption = 'Zamknij'
+        OnClick = Button2Click
+        TabOrder = 1
+      end
+    end
+  end
+  object Memo1: TMemo
+    Left = 0
+    Height = 200
+    Top = 0
+    Width = 320
+    Align = alClient
+    Lines.Strings = (
+      'Memo1'
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 1
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.txt'
+    Filter = 'Pliki tekstowe|*.txt'
+    left = 80
+    top = 136
+  end
+end
