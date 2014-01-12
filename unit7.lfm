@@ -1,0 +1,112 @@
+object Form6: TForm6
+  Left = 441
+  Height = 207
+  Top = 234
+  Width = 400
+  BorderStyle = bsDialog
+  Caption = 'Pytanie'
+  ClientHeight = 207
+  ClientWidth = 400
+  Position = poScreenCenter
+  LCLVersion = '1.0.1.3'
+  object Label1: TLabel
+    Left = 8
+    Height = 14
+    Top = 8
+    Width = 371
+    Caption = 'Wybrany kontakt posiada dwa adresy email. Który mam wybrać ?'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 48
+    Top = 24
+    Width = 385
+    Caption = 'Podstawowy'
+    ClientHeight = 30
+    ClientWidth = 381
+    TabOrder = 0
+    object Label2: TLabel
+      Left = 6
+      Height = 14
+      Top = 8
+      Width = 32
+      Caption = 'Label2'
+      ParentColor = False
+    end
+    object Button1: TButton
+      Left = 302
+      Height = 25
+      Top = 0
+      Width = 75
+      Caption = 'Wybierz'
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Height = 48
+    Top = 72
+    Width = 385
+    Caption = 'Dodatkowy'
+    ClientHeight = 30
+    ClientWidth = 381
+    TabOrder = 1
+    object Button2: TButton
+      Left = 302
+      Height = 25
+      Top = 0
+      Width = 75
+      Caption = 'Wybierz'
+      OnClick = Button2Click
+      TabOrder = 0
+    end
+    object Label3: TLabel
+      Left = 6
+      Height = 14
+      Top = 8
+      Width = 32
+      Caption = 'Label3'
+      ParentColor = False
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 8
+    Height = 49
+    Top = 120
+    Width = 385
+    Caption = 'Obydwa'
+    ClientHeight = 31
+    ClientWidth = 381
+    TabOrder = 2
+    object Button3: TButton
+      Left = 302
+      Height = 25
+      Top = 0
+      Width = 75
+      Caption = 'Wybierz'
+      OnClick = Button3Click
+      TabOrder = 0
+    end
+    object Label4: TLabel
+      Left = 6
+      Height = 14
+      Top = 8
+      Width = 32
+      Caption = 'Label4'
+      ParentColor = False
+    end
+  end
+  object Button4: TButton
+    Left = 312
+    Height = 25
+    Top = 176
+    Width = 74
+    Caption = 'Rezygnuj'
+    OnClick = Button4Click
+    TabOrder = 3
+  end
+end
