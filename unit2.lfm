@@ -1,7 +1,7 @@
 object Form2: TForm2
-  Left = 536
+  Left = 676
   Height = 341
-  Top = 110
+  Top = 180
   Width = 726
   Caption = 'Nowy email'
   ClientHeight = 341
@@ -73,20 +73,20 @@ object Form2: TForm2
     ClientWidth = 726
     TabOrder = 1
     object Panel5: TPanel
-      Left = 556
+      Left = 456
       Height = 301
       Top = 0
-      Width = 170
+      Width = 270
       Align = alRight
       BevelOuter = bvNone
       ClientHeight = 301
-      ClientWidth = 170
+      ClientWidth = 270
       TabOrder = 0
       object Panel6: TPanel
         Left = 0
         Height = 23
         Top = 0
-        Width = 170
+        Width = 270
         Align = alTop
         BevelOuter = bvNone
         Caption = 'Zalaczniki'
@@ -96,11 +96,11 @@ object Form2: TForm2
         Left = 0
         Height = 50
         Top = 251
-        Width = 170
+        Width = 270
         Align = alBottom
         BevelOuter = bvNone
         ClientHeight = 50
-        ClientWidth = 170
+        ClientWidth = 270
         TabOrder = 1
         object Button1: TButton
           Left = 6
@@ -125,7 +125,7 @@ object Form2: TForm2
         Left = 0
         Height = 228
         Top = 23
-        Width = 170
+        Width = 270
         Align = alClient
         Columns = <        
           item
@@ -146,21 +146,21 @@ object Form2: TForm2
       Left = 0
       Height = 301
       Top = 0
-      Width = 556
+      Width = 456
       Align = alClient
       BevelOuter = bvNone
       ClientHeight = 301
-      ClientWidth = 556
+      ClientWidth = 456
       TabOrder = 1
       object Panel9: TPanel
         Left = 0
         Height = 50
         Top = 251
-        Width = 556
+        Width = 456
         Align = alBottom
         BevelOuter = bvNone
         ClientHeight = 50
-        ClientWidth = 556
+        ClientWidth = 456
         TabOrder = 0
         object Button3: TButton
           Left = 8
@@ -192,22 +192,22 @@ object Form2: TForm2
         Left = 0
         Height = 48
         Top = 0
-        Width = 556
+        Width = 456
         Align = alTop
         BevelOuter = bvNone
         ClientHeight = 48
-        ClientWidth = 556
+        ClientWidth = 456
         TabOrder = 1
         object Panel11: TPanel
           Left = 0
           Height = 26
           Top = 0
-          Width = 556
+          Width = 456
           Align = alTop
           BevelOuter = bvNone
           Caption = 'Panel11'
           ClientHeight = 26
-          ClientWidth = 556
+          ClientWidth = 456
           TabOrder = 0
           object Panel12: TPanel
             Left = 0
@@ -223,7 +223,7 @@ object Form2: TForm2
             Left = 79
             Height = 26
             Top = 0
-            Width = 477
+            Width = 377
             Align = alClient
             TabOrder = 1
             Text = 'Edit2'
@@ -242,7 +242,7 @@ object Form2: TForm2
         Left = 0
         Height = 203
         Top = 48
-        Width = 556
+        Width = 456
         Align = alClient
         Font.Height = -13
         Font.Name = 'Courier New'
