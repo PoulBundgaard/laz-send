@@ -52,7 +52,7 @@ object Form1: TForm1
   object Button3: TButton
     Left = 56
     Height = 25
-    Top = 216
+    Top = 232
     Width = 152
     Caption = 'Konfiguracja'
     OnClick = Button3Click
@@ -66,6 +66,15 @@ object Form1: TForm1
     Caption = 'KONIEC'
     OnClick = Button4Click
     TabOrder = 4
+  end
+  object Button5: TButton
+    Left = 56
+    Height = 25
+    Top = 192
+    Width = 152
+    Caption = 'Wysłane wiadomości'
+    OnClick = Button5Click
+    TabOrder = 5
   end
   object LSMTPClientComponent1: TLSMTPClientComponent
     PipeLine = False

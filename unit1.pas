@@ -17,6 +17,7 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
+    Button5: TButton;
     LSMTPClientComponent1: TLSMTPClientComponent;
     LSSLSessionComponent1: TLSSLSessionComponent;
     Memo1: TMemo;
@@ -26,6 +27,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
   private
@@ -55,10 +57,11 @@ implementation
 {$R *.lfm}
 
 uses
-   Unit2, Unit4, unit6;
+   Unit2, Unit4, unit6, Unit10;
 
 { TForm1 }
 
+// wysylanie emaila
 procedure TForm1.Button2Click(Sender: TObject);
 var
   l : TListItem;
@@ -119,9 +122,19 @@ begin
   SaveConfig;
 end;
 
+// koniec pracy
 procedure TForm1.Button4Click(Sender: TObject);
 begin
   close;
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+  form9.default_id_operat:=form1.default_id_operat;
+  form9.default_nm_operat:=form1.default_nm_operat;
+
+  form9.acrobat_path:=acrobat_path;
+  form9.ShowModal;
 end;
 
 // zapis konfiguracji

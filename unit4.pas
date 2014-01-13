@@ -14,7 +14,6 @@ type
 
   TForm4 = class(TForm)
     Button1: TButton;
-    Button10: TButton;
     Button11: TButton;
     Button12: TButton;
     Button13: TButton;
@@ -22,15 +21,12 @@ type
     Button3: TButton;
     Button4: TButton;
     Button5: TButton;
-    Button6: TButton;
     Button7: TButton;
-    Button8: TButton;
     Button9: TButton;
     Datasource1: TDatasource;
     Dbf1: TDbf;
     Dbf2: TDbf;
     DBGrid1: TDBGrid;
-    Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
     Edit4: TEdit;
@@ -38,7 +34,6 @@ type
     Edit6: TEdit;
     Label1: TLabel;
     Label2: TLabel;
-    Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
@@ -54,6 +49,7 @@ type
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     TabSheet3: TTabSheet;
+    procedure Button10Click(Sender: TObject);
     procedure Button11Click(Sender: TObject);
     procedure Button12Click(Sender: TObject);
     procedure Button13Click(Sender: TObject);
@@ -61,10 +57,12 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
     procedure Button7Click(Sender: TObject);
     procedure Button8Click(Sender: TObject);
     procedure Button9Click(Sender: TObject);
     procedure Dbf1FilterRecord(DataSet: TDataSet; var Accept: Boolean);
+    procedure Edit1Change(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -108,6 +106,11 @@ end;
 procedure TForm4.Button11Click(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TForm4.Button10Click(Sender: TObject);
+begin
+
 end;
 
 //operator dodaj
@@ -289,6 +292,11 @@ begin
   form5.ShowModal;
 end;
 
+procedure TForm4.Button6Click(Sender: TObject);
+begin
+
+end;
+
 procedure TForm4.Button7Click(Sender: TObject);
 var
   buf : string;
@@ -355,6 +363,11 @@ end;
 procedure TForm4.Dbf1FilterRecord(DataSet: TDataSet; var Accept: Boolean);
 begin
   accept:=DataSet.FieldByName('idOperat').AsInteger = form4.default_id_operat;
+end;
+
+procedure TForm4.Edit1Change(Sender: TObject);
+begin
+
 end;
 
 procedure TForm4.FormClose(Sender: TObject; var CloseAction: TCloseAction);
