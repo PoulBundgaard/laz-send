@@ -18,7 +18,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="1"/>
-      <BuildNr Value="13"/>
+      <BuildNr Value="9"/>
       <Language Value="0415"/>
       <StringTable Comments="zbudowany przy uzyciu Lazarus v1.0" ProductName="SendMail by Pigobocian" ProductVersion=""/>
     </VersionInfo>
@@ -53,7 +53,7 @@
         <PackageName Value="LCL"/>
       </Item5>
     </RequiredPackages>
-    <Units Count="11">
+    <Units Count="10">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -128,14 +128,6 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit9"/>
       </Unit9>
-      <Unit10>
-        <Filename Value="unit10.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form9"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit10"/>
-      </Unit10>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
