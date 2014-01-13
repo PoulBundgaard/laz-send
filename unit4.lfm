@@ -1,7 +1,7 @@
 object Form4: TForm4
-  Left = 304
+  Left = 250
   Height = 397
-  Top = 131
+  Top = 142
   Width = 368
   BorderStyle = bsDialog
   Caption = 'Konfiguracja'
@@ -17,9 +17,9 @@ object Form4: TForm4
     Height = 360
     Top = 0
     Width = 368
-    ActivePage = TabSheet1
+    ActivePage = TabSheet2
     Align = alClient
-    TabIndex = 0
+    TabIndex = 2
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Identyfikacja'
@@ -111,23 +111,70 @@ object Form4: TForm4
         Caption = 'Aby operacje w tej zakładce były możliwe do przeprowadzenia należy podać hasło i kliknąć przycisk odblokuj.'#13#10#13#10'PAMIĘTAJ !!! Tutaj można utracić zmagazynowane dane !!!'
         TabOrder = 0
       end
+      object Label3: TLabel
+        Left = 12
+        Height = 14
+        Top = 90
+        Width = 27
+        Caption = 'Haslo'
+        ParentColor = False
+      end
+      object Edit1: TEdit
+        Left = 12
+        Height = 21
+        Top = 106
+        Width = 224
+        EchoMode = emPassword
+        Enabled = False
+        PasswordChar = '*'
+        TabOrder = 1
+        Text = 'wanecki'
+      end
+      object Button6: TButton
+        Left = 244
+        Height = 25
+        Top = 106
+        Width = 104
+        Caption = 'Odblokuj'
+        Enabled = False
+        TabOrder = 2
+      end
       object Button7: TButton
         Left = 12
-        Height = 32
-        Top = 82
-        Width = 208
+        Height = 25
+        Top = 138
+        Width = 336
         Caption = 'Twórz nowe tabele kontaktów'
         OnClick = Button7Click
-        TabOrder = 1
+        TabOrder = 3
+      end
+      object Button8: TButton
+        Left = 12
+        Height = 25
+        Top = 170
+        Width = 336
+        Caption = 'Czysc tabele kontaktów'
+        Enabled = False
+        OnClick = Button8Click
+        TabOrder = 4
       end
       object Button9: TButton
         Left = 12
-        Height = 32
-        Top = 130
-        Width = 208
+        Height = 25
+        Top = 210
+        Width = 336
         Caption = 'Twórz tabelę operatorów'
         OnClick = Button9Click
-        TabOrder = 2
+        TabOrder = 5
+      end
+      object Button10: TButton
+        Left = 12
+        Height = 25
+        Top = 242
+        Width = 336
+        Caption = 'Czysc tabele operatorów'
+        Enabled = False
+        TabOrder = 6
       end
       object Label4: TLabel
         Left = 12
@@ -145,7 +192,7 @@ object Form4: TForm4
         BevelInner = bvLowered
         BevelOuter = bvLowered
         Caption = 'Panel2'
-        TabOrder = 3
+        TabOrder = 7
       end
       object Button12: TButton
         Left = 273
@@ -154,7 +201,7 @@ object Form4: TForm4
         Width = 75
         Caption = 'Wybierz'
         OnClick = Button12Click
-        TabOrder = 4
+        TabOrder = 8
       end
     end
     object TabSheet2: TTabSheet

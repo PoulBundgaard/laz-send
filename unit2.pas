@@ -70,8 +70,6 @@ type
     FMimeStream: TMimeStream;
 
     bytes_sent, bytes_total : Int64;
-
-    procedure StoreEmail;
   end;
 
 var
@@ -294,7 +292,7 @@ end;
 procedure TForm2.smtpSent(aSocket: TLSocket; const Bytes: Integer);
 begin
   bytes_sent:=bytes_sent+bytes;
-  if bytes_total > 0 then StaticText1.Caption:=FormatFloat('#,##0.00',(bytes_sent/bytes_total)*100)+'%';
+  StaticText1.Caption:=FormatFloat('#,##0.00',(bytes_sent/bytes_total)*100)+'%';
   ProgressBar1.Position:=bytes_sent;
   form8.ProgressBar1.Position:=bytes_sent;
 end;
@@ -318,57 +316,11 @@ begin
               sleep(100);
               smtp.Disconnect();
               form2.FMimeStream.Free;
-              StoreEmail;
             end;
     ssQuit: begin
               SMTP.Disconnect;
             end;
   end;
-end;
-
-procedure TForm2.StoreEmail;
-var
-   i                  : integer;
-   exe,prefix         : string;
-   r,ms,d,g,mn,s,s100 : word;
-   f                  : TextFile;
-
-   function LZ(txt : string;alen : integer):string;
-   begin
-     while length(txt) < alen do txt:='0'+txt;
-     LZ:=txt;
-   end;
-
-begin
-  exe:=ExtractFilePath(ParamStr(0));
-  if exe[length(exe)] <> '\' then exe:=exe+'\';
-
-  DecodeDate(Date(), r,ms,d);
-  DecodeTime(Time(), g,mn,s,s100);
-
-  prefix:=IntToStr(r)+'-'+LZ(IntToStr(ms),2)+'-'+LZ(IntToStr(d),2)+' '+
-          LZ(IntToStr(g),2)+'_'+LZ(IntToStr(mn),2)+'_'+LZ(IntToStr(s),2)+'_'+LZ(IntToStr(s),3);
-
-  // zapis tresci wiadomosci
-  SynEdit1.Lines.SaveToFile(exe+'wiadomosci'+'\'+prefix+'#'+'nagl.txt');
-  // zapis adresatow i tematu
-  AssignFile(f,exe+'wiadomosci'+'\'+prefix+'#'+'adres.txt');
-  rewrite(f);
-  writeln(f,edit1.Text); // adresaci
-  writeln(f,edit2.Text); // temat
-  CloseFile(f);
-  // zapis zalacznikow
-  for i:=0 to ListView1.Items.Count - 1 do
-  begin
-    if not CopyFile(ListView1.Items[i].SubItems[0]+ListView1.Items[i].Caption,
-             exe+'wiadomosci'+'\'+prefix+'#z#'+ListView1.Items[i].Caption,
-             true)
-    then
-      ShowMessage('Nie udalo sie skopiowac zalacznika:'+#13#10+
-                  ListView1.Items[i].SubItems[0]+ListView1.Items[i].Caption);
-
-  end;
-
 end;
 
 end.
