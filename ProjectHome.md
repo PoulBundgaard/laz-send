@@ -1,0 +1,1 @@
+Program do wysyłania emaili w Lazarusie
